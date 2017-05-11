@@ -14,11 +14,11 @@
 
 ##region Install depot_tools
 
-#  #prepare folder
-#  rm -rf $DEPOT_TOOLS_HOME ; mkdir -p $DEPOT_TOOLS_HOME
-#
-#  #Clone the depot_tools repository
-#  git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git $DEPOT_TOOLS_HOME
+  #prepare folder
+  rm -rf $DEPOT_TOOLS_HOME ; mkdir -p $DEPOT_TOOLS_HOME
+
+  #Clone the depot_tools repository
+  git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git $DEPOT_TOOLS_HOME
 
   #Add depot_tools to the end of your PATH (put this in your ~/.bashrc or ~/.zshrc)
   echo "
