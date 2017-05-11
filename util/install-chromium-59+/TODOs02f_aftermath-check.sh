@@ -12,17 +12,21 @@
 ##endregion common bash util
 
 
-##region build chromium
+##region aftermath check
 
   #note current dir
   curDir=`pwd`
 
-  #do build chromium
+  #run test
   cd $CHROMIUM_SRC
-  ninja -C out/Default chrome #TODO We failed here on Ubuntu Desktop 16; may consider to use Docker image https://hub.docker.com/r/justinribeiro/chrome-headless/
+  out/Default/unit_tests --gtest_filter="PushClientTest.*"
+
+  #run chromium
+  #Once it is built, you can simply run the browser
+  out/Default/chrome
 
   #back to where we were
   cd $curDir
 
-##endregion build chromium
+##endregion aftermath check
 
