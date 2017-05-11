@@ -21,3 +21,4 @@
 #load input
 PRIVATE_HOME="$SCRIPT_HOME/_private_"
 DEPOT_TOOLS_HOME="$PRIVATE_HOME/depot_tools"
+CHROMIUM_HOME="$PRIVATE_HOME/chromium"
