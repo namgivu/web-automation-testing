@@ -22,7 +22,7 @@
 
   #Add depot_tools to the end of your PATH (put this in your ~/.bashrc or ~/.zshrc)
   echo "
-export PATH='$PATH:$DEPOT_TOOLS_HOME'
+export PATH=\"\$PATH:$DEPOT_TOOLS_HOME\"
 " >> $BASHRC
 
   #refresh bash shell manually
