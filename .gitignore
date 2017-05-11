@@ -98,4 +98,6 @@ ENV/
 .idea/misc.xml
 .idea/modules.xml
 .idea/workspace.xml
+
+util/install-chromium-59+/_private_
 ##endregion our app's ignore
