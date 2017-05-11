@@ -1,3 +1,5 @@
+##region github's ignore
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -87,3 +89,14 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+##endregion github's ignore
+
+
+##region our app's ignore
+util/docker-util/_private_
+util/docker-util/s00_config.local.sh
+
+util/aws-ecs-util/_private_
+util/aws-ecs-util/s00_config.local.sh
+##endregion our app's ignore
