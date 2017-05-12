@@ -12,14 +12,4 @@
   #import common setting
   source "$UTIL_HOME/common.sh"
 
-  #path
-  BASHRC="$HOME/.bashrc"
-
 ##endregion common bash util
-
-
-#load input
-PRIVATE_HOME="$SCRIPT_HOME/_private_"
-DEPOT_TOOLS_HOME="$PRIVATE_HOME/depot_tools"
-CHROMIUM_HOME="$PRIVATE_HOME/chromium"
-CHROMIUM_SRC="$CHROMIUM_HOME/src"
