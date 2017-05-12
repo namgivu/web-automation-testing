@@ -3,6 +3,7 @@
     <words>
       <w>debian</w>
       <w>deps</w>
+      <w>shopt</w>
       <w>zshrc</w>
     </words>
   </dictionary>
