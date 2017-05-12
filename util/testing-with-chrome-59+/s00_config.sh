@@ -12,9 +12,6 @@
   #import common setting
   source "$UTIL_HOME/common.sh"
 
-  #path
-  BASHRC="$HOME/.bashrc"
-
 ##endregion common bash util
 
 

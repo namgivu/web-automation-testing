@@ -7,6 +7,10 @@ ER='\033[1;31m' #error color
 EC='\033[0m'    #end coloring
 
 
+#path
+BASHRC="$HOME/.bashrc"
+
+
 #region chrome alias
 alias        chrome='google-chrome-beta'
 alias      chrome59='google-chrome-beta'
