@@ -19,6 +19,6 @@ alias chrome_stable='google-chrome-stable'
 
 shopt -s expand_aliases #make bash script recognize alias ref. https://unix.stackexchange.com/a/1498/17671
 
-echo -e '${CM}Alias for chromium 59+ created${EC}'
+echo -e "${CM}Alias for chromium 59+ created${EC}"
 type chrome #aftermath check by printing alias 'chrome'
 #endregion chrome alias
