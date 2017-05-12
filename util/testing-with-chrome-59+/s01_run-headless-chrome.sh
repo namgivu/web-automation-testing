@@ -20,7 +20,7 @@ echo -e "
 
 #Start a normal Chrome binary with the --headless command line flag (Linux-only for now)
 chrome \
-  --headless \                   #Runs Chrome in headless mode
-  --disable-gpu \                #Temporarily needed for now
+  --headless \
+  --disable-gpu \
   --remote-debugging-port=9222 \
-  https://www.chromestatus.com   #URL to open. Defaults to about:blank
+  https://www.chromestatus.com
