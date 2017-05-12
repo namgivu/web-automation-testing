@@ -12,8 +12,11 @@
 ##endregion common bash util
 
 
-#Start a normal Chrome binary with the --headless command line flag (Linux-only for now)
-google-chrome --headless --disable-gpu --remote-debugging-port=9222 https://chromium.org
-
-#Navigate to http://localhost:9222 in another browser to open the DevTools interface or use a tool such as Selenium to drive the headless browser
+#print guide
+echo -e "
+#Navigate to ${CM}http://localhost:9222${EC} in another browser to open the DevTools interface or use a tool such as Selenium to ${CM}drive the headless browser${EC}
 #ref. https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md
+"
+
+#Start a normal Chrome binary with the --headless command line flag (Linux-only for now)
+$chrome --headless --disable-gpu --remote-debugging-port=9222 https://chromium.org
