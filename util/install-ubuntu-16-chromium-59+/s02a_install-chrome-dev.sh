@@ -18,6 +18,6 @@
 
   #Install Chrome Beta Version
   sudo apt-get update
-  sudo apt-get install -y google-chrome-beta
+  sudo apt-get install -y google-chrome-unstable
 
 ##endregion download chrome 59+ from beta channel
