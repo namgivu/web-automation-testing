@@ -6,7 +6,7 @@
   s=${BASH_SOURCE} ; s=$(dirname "$s") ; s=$(cd "$s" && pwd) ;
   SCRIPT_HOME=$s
 
-  s="$SCRIPT_HOME/.." ; s=$(cd "$s" && pwd) ;
+  s="$SCRIPT_HOME/../.." ; s=$(cd "$s" && pwd) ;
   UTIL_HOME=$s
 
   #import common setting

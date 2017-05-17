@@ -21,4 +21,5 @@ shopt -s expand_aliases #make bash script recognize alias ref. https://unix.stac
 
 echo -e "${CM}Alias for chromium 59+ created${EC}"
 type chrome #aftermath check by printing alias 'chrome'
+echo
 #endregion chrome alias
