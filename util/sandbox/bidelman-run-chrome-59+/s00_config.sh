@@ -13,7 +13,3 @@
   source "$UTIL_HOME/common.sh"
 
 ##endregion common bash util
-
-
-#load input
-PRIVATE_HOME="$SCRIPT_HOME/_private_"
