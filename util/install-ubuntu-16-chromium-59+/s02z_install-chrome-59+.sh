@@ -13,4 +13,4 @@
 
 
 #do install
-"$SCRIPT_HOME/install-chrome-beta.sh"
+"$SCRIPT_HOME/s02b_install-chrome-beta.sh"
