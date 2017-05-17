@@ -99,5 +99,7 @@ ENV/
 .idea/modules.xml
 .idea/workspace.xml
 
-util/install-chromium-59+/_private_
+
+util/sandbox/intoli-handon-selenium-w-chrome-59+/_private_
+util/sandbox/intoli-handon-selenium-w-chrome-59+/config-local.sh
 ##endregion our app's ignore
