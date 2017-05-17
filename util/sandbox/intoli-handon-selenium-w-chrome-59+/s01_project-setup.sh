@@ -13,7 +13,7 @@
 
 
 #make the project directory
-mkdir -p $PROJECT_HOME
+rm -rf $PROJECT_HOME && mkdir -p $PROJECT_HOME
 
 #create a virtualenv
 virtualenv $PROJECT_HOME/venv
