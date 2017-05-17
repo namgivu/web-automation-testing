@@ -11,19 +11,23 @@
 
 ##endregion common bash util
 
+#unzip tool
+sudo apt-get install -y bsdtar
+echo
 
-#download
+#download & unpack
 PLATFORM=linux64 #platform options: linux32, linux64, mac64, win32
 VERSION=$(curl -s http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
 DOWNLOAD_URL="http://chromedriver.storage.googleapis.com/$VERSION/chromedriver_$PLATFORM.zip"
-TMP_ZIP='/tmp/chromedriver.zip'
-curl $DOWNLOAD_URL > $TMP_ZIP
-
-#unpack
-sudo apt-get install -y bsdtar
-bsdtar -xvf $TMP_ZIP -C "$PROJECT_HOME/venv/bin/" #unzip using bsdtar ref. https://askubuntu.com/a/855993/22308
+curl $DOWNLOAD_URL | bsdtar -xvf -C "$PROJECT_HOME/venv/bin/" #unzip using bsdtar ref. https://askubuntu.com/a/855993/22308
 
 #aftermath
 echo
 which chromedriver
 chromedriver --version
+
+echo -e "
+${CM}#Please run below script manually${EC}
+#We must have it run successfully; the console to prompt 'Only local connections are allowed.'
+chromedriver
+"
