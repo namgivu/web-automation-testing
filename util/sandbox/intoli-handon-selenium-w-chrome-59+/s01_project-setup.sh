@@ -29,7 +29,7 @@ cd $PROJECT_HOME
 . venv/bin/activate
 
 #install pip packages
-#ipython provides a nice repl, not needed for selenium
+#ipython provides a nice REPL shell environment, not needed for selenium
 pip install selenium ; pip install ipython
 
 #return where we were
