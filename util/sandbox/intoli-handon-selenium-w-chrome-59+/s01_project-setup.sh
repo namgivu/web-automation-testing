@@ -27,7 +27,6 @@ source $PROJECT_HOME/venv/bin/activate
 
 #install pip packages
 sudo -H pip install selenium
-sudo -H pip install ipython #ipython provides a nice REPL shell environment, not needed for selenium
 "
 
 #endregion print next manual steps
