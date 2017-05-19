@@ -26,7 +26,7 @@ ${CM}#Please continue running below script manually${EC}
 source $PROJECT_HOME/venv/bin/activate
 
 #install pip packages
-sudo -H pip install selenium
+pip install selenium
 "
 
 #endregion print next manual steps
