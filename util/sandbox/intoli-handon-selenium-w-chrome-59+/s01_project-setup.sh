@@ -21,22 +21,14 @@ virtualenv $PROJECT_HOME/venv
 #region print next manual steps
   echo -e "
 ${CM}#Please continue running below script manually${EC}
-#change working directory
-curDir=`pwd`
-cd $PROJECT_HOME
 
 #activate a virtualenv
-. venv/bin/activate
+source $PROJECT_HOME/venv/bin/activate
 
 #install pip packages
 #ipython provides a nice REPL shell environment, not needed for selenium
-pip install selenium ; pip install ipython
-
-#return where we were
-cd \$curDir
+sudo -H pip install selenium
+sudo -H pip install ipython
 "
 
-  echo -e "
-${HL}#Please continue running below script manually${EC}
-"
 #endregion print next manual steps
