@@ -48,7 +48,7 @@ driver.get_screenshot_as_file('%s/00.fb-login-page.png' % PRIVATE_HOME)
 
 
 #do login
-loginBtn.click() #TODO why this click not working?
+loginBtn.click() #this click might lead to 2-factor login page
 driver.implicitly_wait(1)
 driver.get_screenshot_as_file('%s/01.fb-after-login.png' % PRIVATE_HOME)
 
