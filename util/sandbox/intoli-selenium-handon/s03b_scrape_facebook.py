@@ -55,7 +55,7 @@ driver.get_screenshot_as_file('%s/01.fb-after-login.png' % PRIVATE_HOME)
 #navigate to my profile
 driver.get('https://www.facebook.com/%s' % FB_USER)
 
-# take another screenshot
+#take another screenshot
 driver.get_screenshot_as_file('%s/02.fb-profile-page.png' % PRIVATE_HOME)
 
 ##endregoin scraping facebook account
