@@ -101,5 +101,5 @@ ENV/
 
 
 util/sandbox/intoli-selenium-handon/_private_
-util/sandbox/intoli-selenium-handon/config-local.sh
+util/sandbox/intoli-selenium-handon/s03a_config_local.py
 ##endregion our app's ignore

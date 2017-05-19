@@ -17,7 +17,7 @@
 
 #load input
 PRIVATE_HOME="$SCRIPT_HOME/_private_"
-PROJECT_HOME="YOUR_PROJECT_HOME"
+PROJECT_HOME="$PRIVATE_HOME/intoli-facebook"
 
 #load private local config
 source "config-local.sh" 2> /dev/null
