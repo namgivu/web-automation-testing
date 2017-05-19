@@ -2,6 +2,7 @@
   <dictionary name="namgivu">
     <words>
       <w>bsdtar</w>
+      <w>chromedirver</w>
       <w>chromedriver</w>
       <w>debian</w>
       <w>deps</w>

@@ -25,7 +25,13 @@ echo
 
   #unpack using bsdtar ref. https://askubuntu.com/a/855993/22308
   sudo apt-get install -y bsdtar
-  bsdtar -xvf $TMP_ZIP -C "$PROJECT_HOME/venv/bin/" #unzip using bsdtar ref. https://askubuntu.com/a/855993/22308
+  CHROMEDIRVER_HOME="$PROJECT_HOME/venv/bin/"
+  bsdtar -xvf $TMP_ZIP -C "$CHROMEDIRVER_HOME" #unzip using bsdtar ref. https://askubuntu.com/a/855993/22308
+
+  #make chromedriver command globally available
+  sudo ln -s "$CHROMEDIRVER_HOME/chromedriver" /usr/local/bin/chromedriver
+  sudo ln -s "$CHROMEDIRVER_HOME/chromedriver" /usr/bin/chromedriver
+
 #endregion download & unpack
 
 
