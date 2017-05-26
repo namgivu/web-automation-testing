@@ -1,7 +1,6 @@
 """Demo @test at class level"""
 
 import unittest
-from proboscis.asserts import assert_equal
 from proboscis import test
 
 
