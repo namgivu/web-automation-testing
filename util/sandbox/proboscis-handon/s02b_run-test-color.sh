@@ -11,4 +11,4 @@
 
 ##endregion common bash util
 
-python "$SCRIPT_HOME/run_test.py"
+python "$SCRIPT_HOME/run_test.py" --with-yanc
