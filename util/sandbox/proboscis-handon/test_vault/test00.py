@@ -5,7 +5,7 @@ from proboscis.asserts import assert_equal
 from proboscis import test
 
 
-@test(groups=["unit", "numbers"])
+@test(groups=["unit", "number"])
 class TestIsNegative(unittest.TestCase):
   """Confirm that utils.is_negative works correctly."""
 

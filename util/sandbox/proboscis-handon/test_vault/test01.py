@@ -5,7 +5,7 @@ from proboscis.asserts import assert_equal
 from proboscis import test
 
 
-@test(groups=["unit", "strings"])
+@test(groups=["unit", "string"])
 def test_reverse():
     """Make sure our complex string reversal logic works."""
     original = "hello"
