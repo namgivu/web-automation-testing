@@ -102,4 +102,6 @@ ENV/
 
 util/sandbox/intoli-selenium-handon/_private_
 util/sandbox/intoli-selenium-handon/s03a_config_local.py
+
+util/sandbox/proboscis-handon/_private_
 ##endregion our app's ignore
