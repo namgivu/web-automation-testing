@@ -11,5 +11,4 @@
 
 ##endregion common bash util
 
-sudo pip install proboscis
-sudo pip install yanc #report with color ref. https://stackoverflow.com/a/33506794/248616, official pip page ref. https://pypi.python.org/pypi/yanc
+python "$SCRIPT_HOME/run_test.py"
