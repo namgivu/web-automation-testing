@@ -12,11 +12,13 @@
 ##endregion common bash util
 
 #unzip tool
+sudo echo 'sudo initiated'
 sudo apt-get install -y bsdtar
 echo
 
 
 #region download & unpack
+  #do download
   PLATFORM=linux64 #platform options: linux32, linux64, mac64, win32
   VERSION=$(curl -s http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
   DOWNLOAD_URL="http://chromedriver.storage.googleapis.com/$VERSION/chromedriver_$PLATFORM.zip"
