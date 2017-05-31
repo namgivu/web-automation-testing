@@ -9,7 +9,7 @@ def loadWebDriverCHROME():
   options = webdriver.ChromeOptions()
 
   #tell selenium to use the beta/dev channel version of chrome
-  options.binary_location = '/usr/bin/google-chrome-unstable'
+  options.binary_location = '/usr/bin/google-chrome-beta'
 
   #set headless mode for chrome
   options.add_argument('headless')
