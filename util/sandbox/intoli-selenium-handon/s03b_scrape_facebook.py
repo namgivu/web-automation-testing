@@ -1,3 +1,5 @@
+"""ref. https://intoli.com/blog/running-selenium-with-headless-chrome/#interacting-with-facebook"""
+
 from common import *
 
 from s03a_config import *
