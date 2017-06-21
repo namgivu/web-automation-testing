@@ -48,6 +48,8 @@ myTextbox.send_keys('abbccc')
 tryIt = driver.find_element_by_xpath("//button[text()='Try it']")
 tryIt.click()
 
-WebDriverWait(driver,10).until(EC.alert_is_present()) #TODO Why alert box not available? We got error here
+#import time ; time.sleep(10) #even wait, it's NOT working
+
+WebDriverWait(driver, 10).until(EC.alert_is_present()) #TODO Why alert box not available? We got error here
 alertBox = driver.switch_to_alert()
 alertBox.accept()

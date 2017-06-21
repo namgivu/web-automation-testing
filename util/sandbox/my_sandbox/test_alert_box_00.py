@@ -35,6 +35,8 @@ url = 'file:///'+htmlFile
 print('Testing at %s' % url)
 driver.get(url)
 
+#import time ; time.sleep(10) #even wait, it's NOT working
+
 WebDriverWait(driver,10).until(EC.alert_is_present()) #TODO Why alert box not available? We got error here
 alertBox = driver.switch_to_alert()
 alertBox.accept()
