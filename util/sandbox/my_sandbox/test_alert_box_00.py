@@ -31,7 +31,9 @@ with open(htmlFile, 'w') as f:
 
 #open sample alert page
 driver = loadWebDriverCHROME()
-driver.get('file:///'+htmlFile)
+url = 'file:///'+htmlFile
+print('Testing at %s' % url)
+driver.get(url)
 
 WebDriverWait(driver,10).until(EC.alert_is_present()) #TODO Why alert box not available? We got error here
 alertBox = driver.switch_to_alert()

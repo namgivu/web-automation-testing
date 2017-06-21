@@ -36,7 +36,9 @@ with open(htmlFile, 'w') as f:
 
 #open sample alert page
 driver = loadWebDriverCHROME()
-driver.get('file:///'+htmlFile)
+url = 'file:///'+htmlFile
+print('Testing at %s' % url)
+driver.get(url)
 
 myTextbox = driver.find_element_by_css_selector('input#myTextbox')
 myTextbox.send_keys('abbccc')
