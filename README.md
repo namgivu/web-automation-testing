@@ -13,4 +13,8 @@ pipenv sync
 pipenv run pytest
 ```
 
-#TODO Trang how to run login_fb.py?
+#run login_fb.py
+pipenv run python -m  src.scenario.login_fb.py 
+
+
+
