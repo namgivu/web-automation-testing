@@ -12,3 +12,5 @@ This is our effort to join in Apkathon competition 2019 ref. https://aptechvietn
 pipenv sync
 pipenv run pytest
 ```
+
+#TODO Trang how to run login_fb.py?
