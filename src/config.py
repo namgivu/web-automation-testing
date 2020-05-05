@@ -1,57 +1,55 @@
-#basic path
-import os ; CODE = APP_HOME = os.path.abspath(os.path.dirname(__file__))
+import os
+
+APP_HOME = os.path.abspath(os.path.dirname(__file__))
 
 
 #region browser name
 class Browser:
     Chrome  = 'Chrome'
+
+    #TODO
     Firefox = 'Firefox'
-    Android = 'Android'
-    iOS     = 'iOS'
+    Edge    = 'Edge'
+    Safari  = 'Safari'
 
 BROWSERS = [
     Browser.Chrome,
 
     #TODO more browser support here
-    # Browser.Firefox,
-    # Browser.Android,
-    # Browser.iOS,
+    # Browser.XXX
 ]
 #endregion browser name
 
 
-##region snapshot folder
+#region snapshot folder
 
-#snapshot flag - TRUE/False means DO/don't take snapshot during the run
+# snapshot flag - TRUE/False means DO/DONT take snapshot during the run
 SNAPSHOT_DEBUG = False
 
-#the snapshot home
-SNAPSHOT_HOME  = '%s/_snapshot_'       % APP_HOME
-SNAPSHOT_VAULT = '%s/_snapshot_/vault' % APP_HOME
+# the snapshot home
+SNAPSHOT_HOME  = f'{APP_HOME}/_snapshot_'
+SNAPSHOT_VAULT = f'{APP_HOME}/_snapshot_/vault'
 
-#timestamp as 'YYYYmm-dd HHMMss ms' ref. https://stackoverflow.com/a/18406412/248616
+# timestamp as 'YYYYmm-dd HHMMss ms' ref. https://stackoverflow.com/a/18406412/248616
 from datetime import datetime
 timestamp = datetime.now().strftime("%Y%m%d-%H%M%S-%f")[:-3]
 
-#prepare folder to store snapshot files for each run
+# prepare folder to store snapshot files for each run
 SNAPSHOT_FOLDER = '%s/%s' % (SNAPSHOT_VAULT, timestamp)
 
-##endregion snapshot folder
-
+#endregion snapshot folder
 
 
 #webdriver config i.e. to use local/remote webdriver
-WEBDRIVER_REMOTE_HUB = '' #empty value to use local hub
+WEBDRIVER_REMOTE_HUB = ''  # empty means using local hub
 
-HOSTING_URL = 'https://release.gigacover.com'
-##region load local config
+
+#region load local config
 
 #ensure exists
-import os.path
-assert os.path.exists('%s/config_local.py' % CODE), \
-       'local config at $CODE/config_local.py is mandatory; please create one from $CODE/config_local.TEMPLATE.py'
+assert os.path.exists(f'{APP_HOME}/config_local.py'), f'Config {APP_HOME}/config_local.py not found - please clone one from {APP_HOME}/config_local.TEMPLATE.py'
 
-#load it
+#load that config_local.py
 from src.config_local import *
 
-##endregion load local config
+#endregion load local config
