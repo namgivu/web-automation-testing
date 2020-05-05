@@ -34,4 +34,4 @@ class Test(unittest.TestCase):
 
         # locate logo and take snapshot and stored under ./src/_snapshot_/vault/
         x = '//*[@id="hplogo"]'
-        _ = wait4VisibleXPath(self.wd, x); takeSnapshot(self.wd, printOutcome=True, forceSnapshot=True)
+        _ = wait4VisibleXPath(self.wd, x); takeSnapshot(self.wd, forceSnapshot=True)
