@@ -10,13 +10,14 @@ selenium = "==3.11.0"  # required this version to dodge the bug ref. https://git
 pyvirtualdisplay = "==0.2.1" # required Xvfb when running on Ubuntu Server
 
 requests = "==2.20.0" # make web request normally
-psycopg2-binary = "==2.7.4"
+psycopg2-binary = "*"
 
-pytest = "==3.5.0"
+# timestamp
+python-dateutil = "*"
+pytz = "*"
 
-# misc
-python-dateutil = "==2.7.3"
-pytz = "==2018.4"
+# unittest
+pytest = "*"
 
 
 [requires]
