@@ -10,10 +10,9 @@ def setUpModule():    pass  # nothing here for now
 def tearDownModule(): pass  # nothing here for now
 
 
-class Test(unittest.TestCase):
+class Test_Fast(unittest.TestCase):
 
-    def setUp(self):
-        self.wd = loadWebDriver(WEBDRIVER_REMOTE_HUB, WindowSize.PC)
+    def setUp(self): pass
 
     def tearDown(self): pass  # nothing here for now
 
@@ -21,17 +20,23 @@ class Test(unittest.TestCase):
     def test_1(self):
         url = 'https://www.google.com'
 
-        self.wd.get(url)
+        wd = loadWebDriver(WEBDRIVER_REMOTE_HUB, WindowSize.PC)
+        wd.get(url)
 
-        title = self.wd.title
+        title = wd.title
         assert title == 'Google'
+
+        wd.quit()
 
 
     def test_2(self):
         url = 'https://www.google.com'
 
-        self.wd.get(url)
+        wd = loadWebDriver(WEBDRIVER_REMOTE_HUB, WindowSize.PC)
+        wd.get(url)
 
         # locate logo and take snapshot and stored under ./src/_snapshot_/vault/
         x = '//*[@id="hplogo"]'
-        _ = wait4VisibleXPath(self.wd, x); takeSnapshot(self.wd, forceSnapshot=True)
+        _ = wait4VisibleXPath(wd, x); takeSnapshot(wd, forceSnapshot=True)
+
+        wd.quit()
