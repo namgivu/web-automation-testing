@@ -1,6 +1,7 @@
 import os
 
-APP_HOME = os.path.abspath(os.path.dirname(__file__))
+PWD      = os.path.abspath(os.path.dirname(__file__))
+APP_HOME = os.path.abspath(f'{PWD}/..')
 
 
 #region browser name
@@ -47,7 +48,7 @@ WEBDRIVER_REMOTE_HUB = ''  # empty means using local hub
 #region load local config
 
 #ensure exists
-assert os.path.exists(f'{APP_HOME}/config_local.py'), f'Config {APP_HOME}/config_local.py not found - please clone one from {APP_HOME}/config_local.TEMPLATE.py'
+assert os.path.exists(f'{PWD}/config_local.py'), f'Config {PWD}/config_local.py not found - please clone one from {PWD}/config_local.TEMPLATE.py'
 
 #load that config_local.py
 from src.config_local import *

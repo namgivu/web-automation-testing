@@ -1,6 +1,8 @@
 .idea/
 .venv/
-**.pytest_cache
 
-src/service/_log_/vault/*
-src/_snapshot_/vault/*/
+**.pytest_cache
+.python-version
+
+_log_/vault/log*
+_snapshot_/vault/snap*/
