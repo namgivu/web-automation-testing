@@ -7,6 +7,7 @@ require python & pipenv ref. bit.ly/nnpipenv
 pipenv sync
 
 PYTHONPATH=`pwd` pipenv run pytest ./tests/test_demo_googlesearch.py::Test::test_Chrome
+PYTHONPATH=`pwd` pipenv run pytest ./tests/test_demo_googlesearch.py::Test::test_Firefox
 ```
 
 
