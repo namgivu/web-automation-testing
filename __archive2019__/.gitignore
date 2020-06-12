@@ -1,0 +1,7 @@
+.idea/
+.venv/
+
+**.pytest_cache
+.python-version
+
+_snapshot_/vault/*/
