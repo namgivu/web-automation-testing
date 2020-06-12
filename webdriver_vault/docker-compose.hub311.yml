@@ -1,0 +1,24 @@
+# docker-compose for selenium ref. https://gist.github.com/manoj9788/67e248064c89d622cadc6192c66b184d
+selenium-hub:
+  image: selenium/hub:3.11.0  #TODO upgrade to latest tag/version
+  ports:
+    - 4444:4444
+  restart: unless-stopped
+
+
+selenium-node-ch:
+  image: selenium/node-chrome:3.4.0-einsteinium
+  ports:
+    - 5900  # may help in case of some single node restarts or more advance configurations e.g. distributed  #TODO what this means?
+  links:
+    - selenium-hub:hub
+  restart: unless-stopped
+
+
+selenium-node-ff:
+  image: selenium/node-firefox:3.4.0-einsteinium
+  ports:
+    - 5900  # may help in case of some single node restarts or more advance configurations e.g. distributed  #TODO what this means?
+  links:
+    - selenium-hub:hub
+  restart: unless-stopped
