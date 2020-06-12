@@ -8,6 +8,7 @@ selenium = "*"
 
 pytest = "*"
 pytest-dotenv = "*"
+pytest-xdist = "*"
 
 [requires]
 python_version = "3.6"
