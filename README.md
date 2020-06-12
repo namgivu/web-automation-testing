@@ -1,18 +1,26 @@
-# ref
-selenium best w/ docker https://github.com/namgivu/web-automation-testing/tree/selenium-w-docker
-                        https://github.com/namgivu/selenium-docker-start
-                        
-selenium basic          https://github.com/namgivu/selenium-start
-selenium intermediate   https://github.com/namgivu/selenium-start2nd-w-proboscis
+# webdriver infra via selenium hub
+ref. https://github.com/SeleniumHQ/docker-selenium#via-docker-compose
 
-# installation
+# install & run test
+require python & pipenv ref. bit.ly/nnpipenv
 ```bash
-./docker/up.sh
-```
-
-# run test
-```bash
-: install python 3.6 and pipenv ref. bit.ly/nnpipenv
 pipenv sync
-PYTHONPATH=`pwd` pipenv run pytest
+
+PYTHONPATH=`pwd` pipenv run pytest ./tests/test_demo_googlesearch.py::Test::test_Chrome
 ```
+
+
+# misc hint
+
+## speed up by using headless
+avoid starting Xvfb server
+-e START_XVFB=false
+https://github.com/SeleniumHQ/docker-selenium#running-in-headless-mode
+
+
+## aftermath seleniumhub check
+/wd/hub/status endpoint
+https://github.com/SeleniumHQ/docker-selenium#waiting-for-the-grid-to-be-ready
+
+check-grid.sh script
+https://github.com/SeleniumHQ/docker-selenium#adding-a-healthcheck-to-the-grid
