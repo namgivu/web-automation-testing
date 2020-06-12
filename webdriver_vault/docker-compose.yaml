@@ -1,0 +1,34 @@
+# ref. https://github.com/SeleniumHQ/docker-selenium#version-3
+# to execute this docker-compose yml file use `docker-compose -f <file_name> up`; add the `-d` flag at the end for detached execution
+version: "3"
+services:
+  selenium_hub:
+    image: selenium/hub:3.141.59-20200525  # ref. https://hub.docker.com/r/selenium/hub/tags
+    ports:
+      - "4444:4444"
+    networks:
+      - wdv_dockernetwork
+
+  chrome:
+    image: selenium/node-chrome:3.141.59-20200525
+    volumes:
+      - /dev/shm:/dev/shm  #TODO what is this for
+    depends_on:
+      - selenium_hub
+    environment:
+      - HUB_HOST=selenium_hub
+      - HUB_PORT=4444
+
+  firefox:
+    image: selenium/node-firefox:3.141.59-20200525
+    volumes:
+      - /dev/shm:/dev/shm  #TODO what is this for
+    depends_on:
+      - selenium_hub
+    environment:
+      - HUB_HOST=selenium_hub
+      - HUB_PORT=4444
+
+networks:  # ref. https://stackoverflow.com/a/52587564/248616
+  wdv_dockernetwork:
+    external: false  # ref. https://docs.docker.com/compose/compose-file/#external-1
